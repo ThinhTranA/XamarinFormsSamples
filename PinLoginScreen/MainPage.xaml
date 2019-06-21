@@ -1,7 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="PinLoginScreen.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid Padding="5,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
+
+       <Grid.RowDefinitions>
+         <RowDefinition Height="2*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+       </Grid.ColumnDefinitions>
+
+       <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="Black" Text="0"
+              TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.ColumnSpan="3" />
+
+       <Button Text="7" Grid.Row="1" Grid.Column="0"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+       <Button Text="8" Grid.Row="1" Grid.Column="1"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+       <Button Text="9" Grid.Row="1" Grid.Column="2"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+
+      <Button Text="4" Grid.Row="2" Grid.Column="0"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+       <Button Text="5" Grid.Row="2" Grid.Column="1"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+       <Button Text="6" Grid.Row="2" Grid.Column="2"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+
+      <Button Text="1" Grid.Row="3" Grid.Column="0"
+               BackgroundColor="Gray" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+       <Button Text="2" Grid.Row="3" Grid.Column="1"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+       <Button Text="3" Grid.Row="3" Grid.Column="2"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+        
+       <Button Text="Forgot Pin" Grid.Row="4" Grid.Column="0" 
+               BackgroundColor="White" TextColor="Black"
+               FontSize="20" BorderRadius="0" Clicked="OnSelectNumber" />
+        <Button Text="2" Grid.Row="4" Grid.Column="1"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+       <Button Text="Del" Grid.Row="4" Grid.Column="2"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+               
+               
+
+    </Grid>
 </ContentPage>
